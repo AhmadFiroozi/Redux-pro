@@ -55,11 +55,7 @@ npm start api
 
 
  <div align="center">
-
-<img width="1346" height="643" alt="Image" src="https://github.com/user-attachments/assets/60ac38ab-b55a-49bc-a1c5-f7eda6bb25e3" />
-<img width="1348" height="574" alt="Image" src="https://github.com/user-attachments/assets/3a085a36-d7af-4091-bbbe-6e01806486f6" />
-<img width="1363" height="687" alt="Image" src="https://github.com/user-attachments/assets/5b7faa1e-1994-4d18-bb9c-a8eaf01da217" />
-<img width="1362" height="687" alt="Image" src="https://github.com/user-attachments/assets/01ecea87-6521-41f4-9135-71943cfacfa9" />
-<img width="1365" height="688" alt="Image" src="https://github.com/user-attachments/assets/d7f2e2a9-d21c-4a86-be54-1af49f710ac8" />
-<img width="1366" height="676" alt="Image" src="https://github.com/user-attachments/assets/e0c36ee4-b79d-4689-9ec2-1e4278ccf802" />
+<img width="412" height="565" alt="Image" src="https://github.com/user-attachments/assets/b0c5618e-81fd-4933-9f20-5ae93d4504a2" />
+<img width="405" height="574" alt="Image" src="https://github.com/user-attachments/assets/fdf41cef-6523-45b1-9eaa-0bac1b5e2915" />
+<img width="1042" height="494" alt="Image" src="https://github.com/user-attachments/assets/ef8d6390-e5d8-4b70-ba36-364f9e8c0cee" />
 </div>
