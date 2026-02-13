@@ -1,16 +1,54 @@
-# React + Vite
+# 🛒 Shopping Cart App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+این پروژه یک **سبد خرید (Shopping Cart)** است که با استفاده از **Redux Toolkit** توسعه داده شده و برای شبیه‌سازی بک‌اند از **json-server** به‌عنوان Fake API استفاده می‌کند.
 
-Currently, two official plugins are available:
+پروژه دارای **Dark Mode** بوده و شامل دو روت اصلی است:
+- 🏠 Home Page
+- 🛍️ Cart Page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 تکنولوژی‌های استفاده‌شده
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Redux Toolkit
+- createAsyncThunk
+- json-server
+- React Router
+- JavaScript
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 توضیحات پروژه
+
+در این پروژه مدیریت state سراسری با **Redux Toolkit** انجام شده است.  
+برای انجام درخواست‌های async مانند دریافت داده‌ها از API فیک،  
+از **createAsyncThunk** استفاده شده است.
+
+داده‌ها توسط **json-server** شبیه‌سازی شده‌اند و اپلیکیشن از طریق آن با API ارتباط برقرار می‌کند.
+
+همچنین قابلیت **Dark / Light Mode** برای بهبود تجربه کاربری پیاده‌سازی شده است.
+
+---
+
+## 🗂️ روت‌های اصلی
+
+- `/` → Home Page (نمایش محصولات)
+- `/cart` → Cart Page (سبد خرید)
+
+---
+
+## ▶️ نحوه اجرای پروژه
+
+برای اجرای پروژه، مراحل زیر را دنبال کنید:
+
+1. ابتدا وابستگی‌ها را نصب کنید:
+```bash
+npm install
+2.برای اجرای Front-end
+npm run dev
+3.برای اجرای FakeApi(json server)
+npm start api
+---
+##⚠️ توجه:
+برای عملکرد صحیح پروژه، هر دو دستور باید هم‌زمان در حال اجرا باشند.
