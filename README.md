@@ -52,3 +52,6 @@ npm start api
 ---
 ##⚠️ توجه:
 برای عملکرد صحیح پروژه، هر دو دستور باید هم‌زمان در حال اجرا باشند.
+
+
+<img width="412" height="565" alt="Image" src="https://github.com/user-attachments/assets/b3a37fd7-6aae-48a8-8cb6-737c97a6842e" />
