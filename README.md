@@ -48,7 +48,7 @@ npm install
 2.برای اجرای Front-end
 npm run dev
 3.برای اجرای FakeApi(json server)
-npm start api
+npm start-api
 ---
 ##⚠️ توجه:
 برای عملکرد صحیح پروژه، هر دو دستور باید هم‌زمان در حال اجرا باشند.
