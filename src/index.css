@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "iransans";
+  src: url("../src/assets/fonts/IRANSansX-Regular.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --color-orange: #fdcc75;
+
+  --bg-dark-100: rgb(51 60 76);
+  --bg-dark-200: rgb(36 42 56);
+  --bg-dark-300: rgb(17 24 39);
+
+  --text-dark-100: rgb(255, 255, 255);
+  --text-dark-200: rgb(158 175 201);
+  --text-dark-300: rgb(129 142 162);
+
+  --bg-light-100: rgb(204, 205, 205);
+  --bg-light-200: rgb(245 245 245);
+}
+
+body {
+  font-family: "iransans", sans-serif;
+  direction: rtl;
+  background: #f3f4f6;
+}
+
+body.dark {
+  background: var(--bg-dark-300);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  padding: 8px;
+  width: 25%;
+}

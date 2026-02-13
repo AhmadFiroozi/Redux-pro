@@ -1,0 +1,81 @@
+.navabarContainer {
+   background: #fff;
+}
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 80px;
+}
+ul {
+   display: flex;
+   gap: 8px;
+}
+ul li {
+   padding: 10px;
+}
+ul li a {
+   text-decoration: none;
+   color: black;
+}
+.navbar .icons {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   color: rgb(74, 74, 74);
+}
+.navbar .cartIcon {
+   width: 40px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 30%;
+   background: var(--bg-light-200);
+   color: var(--bg-dark-200);
+   position: relative;
+}
+.navbar .cartIcon a {
+   color: rgb(74, 74, 74);
+}
+.navbar .cartIcon span {
+   width: 20px;
+   height: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   background: var(--bg-light-100);
+   position: absolute;
+   top: -8px;
+   right: -8px;
+}
+.navabarContainer .cartIcon svg {
+   vertical-align: middle;
+}
+.darkModeIcon svg {
+   cursor: pointer;
+   vertical-align: bottom;
+}
+
+/* dark mode */
+.navabarContainer.dark {
+   background: var(--bg-dark-200);
+   color: var(--text-dark-100);
+}
+.navabarContainer.dark a {
+   color: var(--text-dark-200);
+}
+
+.navabarContainer.dark .cartIcon span {
+   background: var(--color-orange);
+   color: var(--bg-dark-100);
+}
+
+.navabarContainer.dark .cartIcon {
+   background: var(--bg-dark-100);
+}
+
+.navabarContainer.dark .navbar .icons {
+   color: var(--text-dark-200);
+}

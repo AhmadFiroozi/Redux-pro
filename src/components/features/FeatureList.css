@@ -1,0 +1,14 @@
+.featureListContainer h2 {
+   padding: 16px 0;
+}
+.featuresList {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 16px;
+}
+
+/* dark mode */
+.featureListContainer.dark h2 {
+    color: white;
+}

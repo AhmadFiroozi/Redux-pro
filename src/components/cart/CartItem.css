@@ -1,0 +1,31 @@
+.cartItem {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 8px 16px;
+   gap: 90px;
+   background: var(--bg-light-200);
+   margin: 8px 0;
+   border-radius: 10px;
+}
+.cartItem .right,
+.cartItem .left {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+}
+.cartItem .right p {
+   font-size: 14px;
+}
+.cartItem .left p {
+   width: 110px;
+}
+.cartItem img {
+   width: 100px;
+   border-radius: 15px;
+}
+/* dark mode */
+body.dark .cartItem {
+   background: var(--bg-dark-100);
+   color: var(--text-dark-100);
+}

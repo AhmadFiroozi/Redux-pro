@@ -1,0 +1,68 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "آموزش پروژه محور (tailwind css)",
+      "image": "https://dl.next1code.ir/images//redux/courses/tailwind.jpg",
+      "teacher": "میلاد بهرامی",
+      "price": 899000,
+      "studentCount": 60
+    },
+    {
+      "id": "2",
+      "title": "آموزش پروژه محور  (nodejs)",
+      "image": "https://dl.next1code.ir/images//redux/courses/nodejs.jpg",
+      "teacher": "میلاد بهرامی",
+      "price": 3499000,
+      "studentCount": 56
+    },
+    {
+      "id": "3",
+      "title": "آموزش پروژه محور  (next.js)",
+      "image": "https://dl.next1code.ir/images//redux/courses/nextjs.jpg",
+      "teacher": "میلاد بهرامی",
+      "price": 2799000,
+      "studentCount": 90
+    },
+    {
+      "id": "4",
+      "title": "آموزش پروژه محور (regex)",
+      "image": "https://dl.next1code.ir/images//redux/courses/regex.jpg",
+      "teacher": "میلاد بهرامی",
+      "price": 299000,
+      "studentCount": 231
+    },
+    {
+      "id": "5",
+      "title": "آموزش پکیج منیجر npm",
+      "image": "https://dl.next1code.ir/images//redux/courses/npm.jpg",
+      "teacher": "میلاد بهرامی",
+      "price": 199000,
+      "studentCount": 260
+    },
+    {
+      "id": "6",
+      "title": "آموزش کتابخانه های کاربردی ریکت",
+      "image": "https://dl.next1code.ir/images//redux/courses/react-lib.jpg",
+      "teacher": "میلاد بهرامی",
+      "price": 799000,
+      "studentCount": 70
+    },
+    {
+      "id": "7",
+      "title": "دوره آموزش گیت و گیت هاب",
+      "image": "https://dl.next1code.ir/images//redux/courses/github.jpg",
+      "teacher": "میلاد بهرامی",
+      "price": 599000,
+      "studentCount": 396
+    },
+    {
+      "id": "8",
+      "title": "دوره آموزش redux",
+      "image": "https://dl.next1code.ir/images//redux/courses/redux.jpg",
+      "teacher": "میلاد بهرامی",
+      "price": 1299000,
+      "studentCount": 140
+    }
+  ]
+}

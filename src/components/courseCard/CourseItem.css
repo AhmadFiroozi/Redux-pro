@@ -1,0 +1,83 @@
+.courseCard {
+   background: #fff;
+   border-radius: 10px;
+   overflow: hidden;
+   flex-grow: 1;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.cardHeader img {
+   max-width: 100%;
+}
+
+.cardBody {
+   padding: 16px;
+   border-bottom: 1px solid rgb(222 228 239);
+}
+.courseTitle {
+   padding: 4px 0 8px 0;
+}
+.courseDesc {
+   font-size: 14px;
+   padding: 8px 0;
+}
+.courseInfo {
+   color: rgb(74, 74, 74);
+   display: flex;
+   justify-content: space-between;
+}
+.courseTeacher svg {
+   vertical-align: middle;
+   font-size: 18px;
+}
+.courseStudent svg {
+   vertical-align: sub;
+   font-size: 18px;
+}
+.courseTeacher,
+.courseStudent {
+   display: flex;
+   align-items: center;
+   padding: 16px 0;
+   font-size: 14px;
+   gap: 8px;
+}
+.cardFooter {
+   display: flex;
+   padding: 16px;
+   justify-content: space-between;
+   align-items: center;
+}
+.cardFooter button {
+   all: unset;
+   background: var(--color-orange);
+   padding: 5px 10px;
+   border-radius: 10px;
+   cursor: pointer;
+}
+.cardFooter .price {
+   font-weight: bold;
+}
+
+/* dark mode */
+.courseCard.dark {
+   background-color: var(--bg-dark-200);
+   color: var(--text-dark-200);
+}
+.courseCard.dark .courseTitle {
+   color: var(--text-dark-100);
+}
+.courseCard.dark .courseDesc {
+   color: var(--text-dark-200);
+}
+.courseCard.dark .price {
+   color: var(--color-orange);
+}
+.courseCard.dark .courseInfo {
+   color: var(--text-dark-300);
+}
+.courseCard.dark .cardFooter {
+   color: var(--bg-dark-300);
+}
+.courseCard.dark .cardBody {
+   border-bottom: 1px solid var(--bg-dark-100);
+}
