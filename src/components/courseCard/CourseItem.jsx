@@ -1,60 +1,59 @@
 import "./CourseItem.css";
-import { FaRegSmile } from "react-icons/fa";
-import { FaUsers } from "react-icons/fa";
+import { FaRegSmile, FaUsers } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../Redux/slices/cart";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+import { addToCart, selectCartItems } from "../../Redux/slices/cart";
 
-function CourseItem({ id, title, image, price, teacher, studentCount }) {
+function CourseItem({ id, title, desc, image, price, teacher, studentCount }) {
   const { theme } = useSelector((store) => store.global);
-  const { data } = useSelector((store) => store.courses);
-  const { addedProducts } = useSelector((store) => store.cart);
+  const cartItems = useSelector(selectCartItems);
   const dispatch = useDispatch();
+
+  const isInCart = cartItems.some((item) => item.id === id);
+
   const clickHandler = () => {
-    if (isProductExistInCart() == true) {
-      toast.error("دوره قبلا به سبد خرید اضافه شده");
-    } else {
-      const courseInfo = data.find((course) => course.id == id);
-      dispatch(addToCart(courseInfo));
-      toast.success("دوره با موفقیت به سبد خرید اضافه شد");
+    if (isInCart) {
+      toast.error("این دوره قبلاً به سبد خرید اضافه شده است");
+      return;
     }
+
+    dispatch(addToCart({ id, title, image, price, teacher }));
+    toast.success("دوره با موفقیت به سبد خرید اضافه شد");
   };
-  const isProductExistInCart = () => {
-    return addedProducts.some((product) => product.id == id);
-  };
+
   return (
-    <>
-      <Toaster position="top" />
-      <div className={`courseCard ${theme}`}>
-        <div className="cardHeader">
-          <img src={image} />
-        </div>
-        <div className="cardBody">
-          <h4 className="courseTitle">{title}</h4>
-          <p className="courseDesc">
-            متن تستی کوتاه برای توضیات مختصر در مورد دوره آموزشی
-          </p>
-          <div className="courseInfo">
-            <div className="courseTeacher">
-              <span>
-                <FaRegSmile />
-              </span>
-              <p>{teacher}</p>
-            </div>
-            <div className="courseStudent">
-              <p>{studentCount}</p>
-              <span>
-                <FaUsers />
-              </span>
-            </div>
+    <div className={`courseCard ${theme}`}>
+      <div className="cardHeader">
+        <img src={image} alt={title} loading="lazy" />
+      </div>
+
+      <div className="cardBody">
+        <h4 className="courseTitle">{title}</h4>
+        <p className="courseDesc">{desc}</p>
+
+        <div className="courseInfo">
+          <div className="courseTeacher">
+            <span>
+              <FaRegSmile />
+            </span>
+            <p>{teacher}</p>
+          </div>
+          <div className="courseStudent">
+            <p>{studentCount.toLocaleString("fa-IR")}</p>
+            <span>
+              <FaUsers />
+            </span>
           </div>
         </div>
-        <div className="cardFooter">
-          <button onClick={clickHandler}>ثبت نام</button>
-          <span className="price">{price.toLocaleString()}</span>
-        </div>
       </div>
-    </>
+
+      <div className="cardFooter">
+        <button onClick={clickHandler} disabled={isInCart}>
+          {isInCart ? "در سبد خرید" : "ثبت نام"}
+        </button>
+        <span className="price">{price.toLocaleString("fa-IR")} تومان</span>
+      </div>
+    </div>
   );
 }
 

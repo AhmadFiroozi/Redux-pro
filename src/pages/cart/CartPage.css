@@ -58,3 +58,22 @@
   background: var(--bg-dark-200);
   color: var(--text-dark-100);
 }
+
+.emptyCart p {
+  margin: 8px 0 20px;
+  color: rgb(107 114 128);
+}
+.emptyCart a {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: var(--color-orange);
+  color: rgb(17 24 39);
+  text-decoration: none;
+}
+.totalCart {
+  height: auto;
+}
+.totalCart p {
+  margin-bottom: 8px;
+}

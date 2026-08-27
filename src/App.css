@@ -1,0 +1,31 @@
+.notFound {
+  max-width: 520px;
+  margin: 80px auto;
+  padding: 32px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+}
+.notFound h1 {
+  font-size: 64px;
+  margin-bottom: 8px;
+}
+.notFound p {
+  color: rgb(107 114 128);
+  margin-bottom: 24px;
+}
+.notFound a {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: var(--color-orange);
+  color: rgb(17 24 39);
+  text-decoration: none;
+}
+.notFound.dark {
+  background: var(--bg-dark-200);
+  color: var(--text-dark-100);
+}
+.notFound.dark p {
+  color: var(--text-dark-200);
+}

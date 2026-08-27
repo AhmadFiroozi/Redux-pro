@@ -81,3 +81,14 @@
 .courseCard.dark .cardBody {
    border-bottom: 1px solid var(--bg-dark-100);
 }
+
+.cardFooter button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.cardHeader img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 640 / 380;
+  object-fit: cover;
+}

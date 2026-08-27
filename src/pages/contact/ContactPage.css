@@ -1,0 +1,112 @@
+.contactPage {
+  padding: 48px 16px 64px;
+}
+
+.contactPage h1 {
+  margin-bottom: 32px;
+  font-size: 32px;
+}
+
+.contactGrid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
+}
+
+.contactInfo,
+.contactForm {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 6px;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgb(229 231 235);
+}
+.contactRow:last-child {
+  border-bottom: 0;
+}
+
+.contactIcon {
+  display: inline-flex;
+  font-size: 22px;
+  color: rgb(180 130 30);
+}
+
+.contactLabel {
+  font-size: 13px;
+  color: rgb(107 114 128);
+}
+
+.contactValue {
+  font-size: 15px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 12px 14px;
+  border: 1px solid rgb(209 213 219);
+  border-radius: 8px;
+  background: #fff;
+  color: inherit;
+  resize: none;
+}
+
+.contactForm input:focus-visible,
+.contactForm textarea:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 1px;
+}
+
+.contactForm button {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--color-orange);
+  color: rgb(17 24 39);
+  cursor: pointer;
+}
+
+/* dark mode */
+.contactPage.dark {
+  color: var(--text-dark-100);
+}
+.contactPage.dark .contactInfo,
+.contactPage.dark .contactForm {
+  background: var(--bg-dark-200);
+}
+.contactPage.dark .contactRow {
+  border-color: var(--bg-dark-100);
+}
+.contactPage.dark .contactLabel {
+  color: var(--text-dark-300);
+}
+.contactPage.dark .contactIcon {
+  color: var(--color-orange);
+}
+.contactPage.dark .contactForm input,
+.contactPage.dark .contactForm textarea {
+  background: var(--bg-dark-100);
+  border-color: var(--bg-dark-100);
+  color: var(--text-dark-100);
+}
+.contactPage.dark .contactForm input::placeholder,
+.contactPage.dark .contactForm textarea::placeholder {
+  color: var(--text-dark-300);
+}

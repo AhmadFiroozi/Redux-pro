@@ -5,3 +5,43 @@
 .newestCourses.dark{
     color: white;
 }
+.courseSkeleton {
+  height: 330px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #e9ecf1 25%, #f3f4f6 50%, #e9ecf1 75%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.4s ease-in-out infinite;
+}
+.courseSkeleton.dark {
+  background: linear-gradient(90deg, #242a38 25%, #333c4c 50%, #242a38 75%);
+  background-size: 200% 100%;
+}
+@keyframes skeletonShimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .courseSkeleton { animation: none; }
+}
+
+.coursesError {
+  width: 100%;
+  padding: 40px 16px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+}
+.coursesError p {
+  margin-bottom: 16px;
+  color: #b91c1c;
+}
+.coursesError button {
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--color-orange);
+}
+.coursesError.dark {
+  background: var(--bg-dark-200);
+}

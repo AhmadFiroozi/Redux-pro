@@ -79,3 +79,25 @@ ul li a {
 .navabarContainer.dark .navbar .icons {
    color: var(--text-dark-200);
 }
+
+.darkModeIcon button {
+   display: flex;
+   align-items: center;
+   padding: 0;
+   border: 0;
+   background: none;
+   color: inherit;
+   cursor: pointer;
+}
+.navbar ul li a.active {
+   font-weight: 700;
+   color: rgb(180 130 30);
+}
+.navabarContainer.dark .navbar ul li a.active {
+   color: var(--color-orange);
+}
+@media (max-width: 600px) {
+   .navbar { height: auto; padding: 12px 0; flex-wrap: wrap; gap: 8px; }
+   .navbar ul { flex-wrap: wrap; gap: 0; }
+   .navbar ul li { padding: 8px 10px; }
+}

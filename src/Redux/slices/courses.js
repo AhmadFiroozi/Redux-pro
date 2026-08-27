@@ -1,36 +1,46 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { API_BASE } from "../../api";
 
-export const fechCourses = createAsyncThunk(
-  "courses/fechCoursesStatus",
-  async (arg, { rejectWithValue }) => {
+export const fetchCourses = createAsyncThunk(
+  "courses/fetchCourses",
+  async (_, { rejectWithValue }) => {
     try {
-      const res = await fetch("http://localhost:3000/courses");
-      const courses = await res.json();
-      return courses;
-    } catch (err) {
+      const response = await fetch(`${API_BASE}/courses`);
+
+      // fetch فقط روی خطای شبکه reject می‌شود؛ ۴۰۴ و ۵۰۰ را باید دستی چک کرد
+      if (!response.ok) {
+        return rejectWithValue("دریافت اطلاعات با مشکل مواجه شد");
+      }
+
+      return await response.json();
+    } catch {
       return rejectWithValue("دریافت اطلاعات با مشکل مواجه شد");
     }
-  },
+  }
 );
+
 export const coursesSlice = createSlice({
   name: "courses",
   initialState: {
     data: [],
-    loding: false,
-    errorMasage: null,
+    loading: false,
+    errorMessage: null,
   },
+  reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fechCourses.fulfilled, (state, action) => {
-      state.data = action.payload;
-      state.loding = false;
-    });
-    builder.addCase(fechCourses.pending, (state, action) => {
-      state.loding = true;
-    });
-    builder.addCase(fechCourses.rejected, (state, action) => {
-      state.loding = false;
-      state.errorMasage = action.payload;
-    });
+    builder
+      .addCase(fetchCourses.pending, (state) => {
+        state.loading = true;
+        state.errorMessage = null;
+      })
+      .addCase(fetchCourses.fulfilled, (state, action) => {
+        state.loading = false;
+        state.data = action.payload;
+      })
+      .addCase(fetchCourses.rejected, (state, action) => {
+        state.loading = false;
+        state.errorMessage = action.payload;
+      });
   },
 });
 

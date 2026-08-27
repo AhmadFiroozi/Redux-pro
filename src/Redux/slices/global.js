@@ -2,16 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const globalSlice = createSlice({
   name: "global",
-  initialState: { theme: "ligth" },
+  initialState: { theme: "light" },
   reducers: {
-    toggleTheme: (state, action) => {
-      if (action.payload == "ligth") {
-        return { theme: "dark" };
-      } else {
-        return { theme: "ligth" };
-      }
+    // بدون payload: خود reducer حالت فعلی را می‌داند
+    toggleTheme: (state) => {
+      state.theme = state.theme === "light" ? "dark" : "light";
     },
   },
 });
+
 export const { toggleTheme } = globalSlice.actions;
 export default globalSlice.reducer;

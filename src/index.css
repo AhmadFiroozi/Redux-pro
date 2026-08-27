@@ -38,6 +38,7 @@ body.dark {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .row {
@@ -46,7 +47,20 @@ body.dark {
   flex-wrap: wrap;
 }
 
+/* گرید واکنش‌گرا: چهار ستون روی دسکتاپ تا یک ستون روی موبایل */
 .col {
   padding: 8px;
   width: 25%;
+}
+
+@media (max-width: 1024px) {
+  .col { width: 33.333%; }
+}
+
+@media (max-width: 768px) {
+  .col { width: 50%; }
+}
+
+@media (max-width: 480px) {
+  .col { width: 100%; }
 }

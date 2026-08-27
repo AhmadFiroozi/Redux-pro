@@ -1,26 +1,40 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CourseItem from "./CourseItem";
+import { fetchCourses } from "../../Redux/slices/courses";
 import "./CoursesSection.css";
-import { useEffect } from "react";
-import { fechCourses } from "../../Redux/slices/courses";
+
 function CoursesSection() {
   const { theme } = useSelector((store) => store.global);
-  const { data, loding, errorMasage } = useSelector((store) => store.courses);
+  const { data, loading, errorMessage } = useSelector((store) => store.courses);
   const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(fechCourses());
-  }, []);
+    dispatch(fetchCourses());
+  }, [dispatch]);
+
   return (
     <div className="coursesSectionContainer">
       <div className="container">
         <h2 className={`iransans newestCourses ${theme}`}>
-          جدیدترین دوره های آموزشی
+          جدیدترین دوره‌های آموزشی
         </h2>
+
         <div className="row">
-          {loding ? (
-            <h2>در حال دریافت اطلاعات</h2>
-          ) : errorMasage ? (
-            <h2>دریافت اطلاعات با خطا مواجه شد</h2>
+          {loading ? (
+            // اسکلت به‌جای متن خالی، تا جابه‌جایی چیدمان نداشته باشیم
+            Array.from({ length: 8 }).map((_, i) => (
+              <div className="col" key={i}>
+                <div className={`courseSkeleton ${theme}`} />
+              </div>
+            ))
+          ) : errorMessage ? (
+            <div className={`coursesError ${theme}`}>
+              <p>{errorMessage}</p>
+              <button onClick={() => dispatch(fetchCourses())}>
+                تلاش دوباره
+              </button>
+            </div>
           ) : (
             data.map((course) => (
               <div className="col" key={course.id}>

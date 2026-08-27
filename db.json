@@ -2,65 +2,73 @@
   "courses": [
     {
       "id": "1",
-      "title": "آموزش پروژه محور (tailwind css)",
-      "image": "https://dl.next1code.ir/images//redux/courses/tailwind.jpg",
-      "teacher": "میلاد بهرامی",
+      "title": "دورهٔ پروژه‌محور Tailwind CSS",
+      "desc": "طراحی رابط کاربری با کلاس‌های ابزاری، ساخت کامپوننت‌های واکنش‌گرا و شخصی‌سازی تم.",
+      "image": "/images/courses/tailwind.svg",
+      "teacher": "سارا احمدی",
       "price": 899000,
       "studentCount": 60
     },
     {
       "id": "2",
-      "title": "آموزش پروژه محور  (nodejs)",
-      "image": "https://dl.next1code.ir/images//redux/courses/nodejs.jpg",
-      "teacher": "میلاد بهرامی",
+      "title": "دورهٔ پروژه‌محور Node.js",
+      "desc": "ساخت سرور و REST API با Express، کار با فایل و پایگاه داده، و مدیریت خطا.",
+      "image": "/images/courses/nodejs.svg",
+      "teacher": "رضا کاویانی",
       "price": 3499000,
       "studentCount": 56
     },
     {
       "id": "3",
-      "title": "آموزش پروژه محور  (next.js)",
-      "image": "https://dl.next1code.ir/images//redux/courses/nextjs.jpg",
-      "teacher": "میلاد بهرامی",
+      "title": "دورهٔ پروژه‌محور Next.js",
+      "desc": "رندر سمت سرور، مسیریابی مبتنی بر فایل و بهینه‌سازی سئو در اپلیکیشن‌های React.",
+      "image": "/images/courses/nextjs.svg",
+      "teacher": "سارا احمدی",
       "price": 2799000,
       "studentCount": 90
     },
     {
       "id": "4",
-      "title": "آموزش پروژه محور (regex)",
-      "image": "https://dl.next1code.ir/images//redux/courses/regex.jpg",
-      "teacher": "میلاد بهرامی",
+      "title": "عبارات باقاعده (RegExp) در جاوااسکریپت",
+      "desc": "الگوسازی برای اعتبارسنجی فرم، جستجو و جایگزینی متن با مثال‌های کاربردی.",
+      "image": "/images/courses/regex.svg",
+      "teacher": "نیما شریفی",
       "price": 299000,
       "studentCount": 231
     },
     {
       "id": "5",
-      "title": "آموزش پکیج منیجر npm",
-      "image": "https://dl.next1code.ir/images//redux/courses/npm.jpg",
-      "teacher": "میلاد بهرامی",
+      "title": "کار با پکیج منیجر npm",
+      "desc": "مدیریت وابستگی‌ها، اسکریپت‌ها، نسخه‌بندی معنایی و انتشار پکیج.",
+      "image": "/images/courses/npm.svg",
+      "teacher": "نیما شریفی",
       "price": 199000,
       "studentCount": 260
     },
     {
       "id": "6",
-      "title": "آموزش کتابخانه های کاربردی ریکت",
-      "image": "https://dl.next1code.ir/images//redux/courses/react-lib.jpg",
-      "teacher": "میلاد بهرامی",
+      "title": "کتابخانه‌های کاربردی React",
+      "desc": "React Router، React Hook Form، React Query و ابزارهای پرکاربرد اکوسیستم.",
+      "image": "/images/courses/react-lib.svg",
+      "teacher": "مریم رستمی",
       "price": 799000,
       "studentCount": 70
     },
     {
       "id": "7",
-      "title": "دوره آموزش گیت و گیت هاب",
-      "image": "https://dl.next1code.ir/images//redux/courses/github.jpg",
-      "teacher": "میلاد بهرامی",
+      "title": "Git و GitHub برای توسعه‌دهندگان",
+      "desc": "کنترل نسخه، شاخه‌بندی، حل تعارض و کار تیمی با Pull Request.",
+      "image": "/images/courses/github.svg",
+      "teacher": "رضا کاویانی",
       "price": 599000,
       "studentCount": 396
     },
     {
       "id": "8",
-      "title": "دوره آموزش redux",
-      "image": "https://dl.next1code.ir/images//redux/courses/redux.jpg",
-      "teacher": "میلاد بهرامی",
+      "title": "مدیریت state با Redux Toolkit",
+      "desc": "ساخت slice، createAsyncThunk، نرمال‌سازی داده و الگوهای رایج در پروژه‌های واقعی.",
+      "image": "/images/courses/redux.svg",
+      "teacher": "مریم رستمی",
       "price": 1299000,
       "studentCount": 140
     }

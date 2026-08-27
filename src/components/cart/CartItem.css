@@ -29,3 +29,36 @@ body.dark .cartItem {
    background: var(--bg-dark-100);
    color: var(--text-dark-100);
 }
+
+.qtyControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border: 1px solid rgb(209 213 219);
+  border-radius: 8px;
+}
+.qtyControl button {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+.qtyControl span {
+  min-width: 22px;
+  text-align: center;
+}
+.removeBtn {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: #b91c1c;
+  display: flex;
+  align-items: center;
+}
+body.dark .qtyControl {
+  border-color: var(--bg-dark-100);
+}

@@ -1,0 +1,70 @@
+.aboutPage {
+  padding: 48px 16px 64px;
+}
+
+.aboutPage h1 {
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+
+.aboutPage .lead {
+  max-width: 70ch;
+  line-height: 2;
+  color: rgb(75 85 99);
+  margin-bottom: 40px;
+}
+
+.aboutGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.aboutCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 6px;
+}
+
+.aboutIcon {
+  display: inline-flex;
+  font-size: 28px;
+  color: rgb(180 130 30);
+  margin-bottom: 12px;
+}
+
+.aboutCard h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.aboutCard p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgb(107 114 128);
+}
+
+.aboutPage .note {
+  margin-top: 32px;
+  font-size: 13px;
+  color: rgb(107 114 128);
+}
+
+/* dark mode */
+.aboutPage.dark {
+  color: var(--text-dark-100);
+}
+.aboutPage.dark .lead,
+.aboutPage.dark .note {
+  color: var(--text-dark-200);
+}
+.aboutPage.dark .aboutCard {
+  background: var(--bg-dark-200);
+}
+.aboutPage.dark .aboutCard p {
+  color: var(--text-dark-200);
+}
+.aboutPage.dark .aboutIcon {
+  color: var(--color-orange);
+}
